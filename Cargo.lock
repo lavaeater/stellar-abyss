@@ -311,23 +311,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0c4b4d0bd25bd0b74681c0ad21497610ce1b7c91b1022cd21c80c6fbdd9476b0"
 
 [[package]]
-name = "barnacle_beats"
-version = "0.1.0"
-dependencies = [
- "bevy",
- "bevy-inspector-egui",
- "bevy_asset_loader",
- "bevy_kira_audio",
- "embed-resource",
- "nom",
- "rand",
- "ron",
- "serde",
- "sickle_ui",
- "webbrowser 1.0.1",
-]
-
-[[package]]
 name = "base64"
 version = "0.21.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2689,9 +2672,9 @@ checksum = "e53debba6bda7a793e5f99b8dacf19e626084f525f7829104ba9898f367d85ff"
 name = "mobile"
 version = "0.1.0"
 dependencies = [
- "barnacle_beats",
  "bevy",
  "cpal",
+ "stellar_abyss",
 ]
 
 [[package]]
@@ -3638,6 +3621,23 @@ name = "static_assertions"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a2eb9349b6444b326872e140eb1cf5e7c522154d69e7a0ffb0fb81c06b37543f"
+
+[[package]]
+name = "stellar_abyss"
+version = "0.1.0"
+dependencies = [
+ "bevy",
+ "bevy-inspector-egui",
+ "bevy_asset_loader",
+ "bevy_kira_audio",
+ "embed-resource",
+ "nom",
+ "rand",
+ "ron",
+ "serde",
+ "sickle_ui",
+ "webbrowser 1.0.1",
+]
 
 [[package]]
 name = "strict-num"

@@ -1,4 +1,4 @@
-use barnacle_beats::GamePlugin;
+use stellar_abyss::GamePlugin;
 use bevy::prelude::*;
 use bevy::window::WindowMode; // ToDo: Replace bevy_game with your new crate name.
 
