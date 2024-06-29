@@ -62,9 +62,9 @@ impl Plugin for StoryPlugin {
         ;
     }
 }
+
 #[derive(Component)]
 pub struct TextComponent;
-
 
 #[derive(Component)]
 struct SimpleWidget;

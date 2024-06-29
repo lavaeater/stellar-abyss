@@ -71,6 +71,7 @@ serde = "*"
 nom = "7.1.3"
 bevy-inspector-egui = "0.24.0"
 sickle_ui = { git = "https://github.com/UmbraLuminosa/sickle_ui", branch = "main" }
+bevy_ascii_terminal = "0.15.0"
 
 ## keep the following in sync with Bevy's dependencies
 #winit = { version = "0.30.0", default-features = false }
