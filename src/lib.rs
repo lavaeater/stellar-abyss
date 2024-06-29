@@ -7,6 +7,7 @@ mod loading;
 mod menu;
 mod player;
 mod ui;
+mod computer_view;
 
 use crate::actions::ActionsPlugin;
 use crate::audio::InternalAudioPlugin;
@@ -19,6 +20,7 @@ use bevy::app::App;
 #[cfg(debug_assertions)]
 use bevy::diagnostic::{FrameTimeDiagnosticsPlugin, LogDiagnosticsPlugin};
 use bevy::prelude::*;
+use crate::computer_view::ComputerViewPlugin;
 
 // This example game uses States to separate logic
 // See https://bevy-cheatbook.github.io/programming/states.html
@@ -30,6 +32,9 @@ enum GameState {
     Loading,
     // During this State the actual game logic is executed
     Playing,
+    // Test the new ascii stuff in this GameState
+    ComputerView,
+    // Show the banners and stuff using sickle ui
     Story,
     // Here the menu is drawn and waiting for player interaction
     Menu,
@@ -39,14 +44,17 @@ pub struct GamePlugin;
 
 impl Plugin for GamePlugin {
     fn build(&self, app: &mut App) {
-        app.init_state::<GameState>().add_plugins((
-            LoadingPlugin,
-            MenuPlugin,
-            ActionsPlugin,
-            InternalAudioPlugin,
-            PlayerPlugin,
-            StoryPlugin,
-        ));
+        app
+            .init_state::<GameState>()
+            .add_plugins((
+                LoadingPlugin,
+                MenuPlugin,
+                ActionsPlugin,
+                InternalAudioPlugin,
+                PlayerPlugin,
+                StoryPlugin,
+                ComputerViewPlugin
+            ));
 
         #[cfg(debug_assertions)]
         {
