@@ -95,11 +95,11 @@ fn setup_menu(mut commands: Commands, textures: Res<TextureAssets>) {
                         ..Default::default()
                     },
                     button_colors,
-                    ChangeState(GameState::Story),
+                    ChangeState(GameState::ComputerView),
                 ))
                 .with_children(|parent| {
                     parent.spawn(TextBundle::from_section(
-                        "Story",
+                        "ComputerView",
                         TextStyle {
                             font_size: 40.0,
                             color: Color::rgb(0.9, 0.9, 0.9),
