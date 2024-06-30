@@ -4,7 +4,7 @@ use crate::beats::data::FactsOfTheWorld;
 use crate::GameState;
 
 pub const BOARD_WIDTH: usize = 60;
-pub const BOARD_HEIGHT: usize = 120;
+pub const BOARD_HEIGHT: usize = 32;
 pub const BOARD_SIZE: UVec2 = UVec2::from_array([BOARD_WIDTH as u32, BOARD_HEIGHT as u32]);
 
 
